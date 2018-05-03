@@ -163,6 +163,7 @@ public class DodajKursGUI extends JFrame {
 							(Integer) (spinnerSifra.getValue()), Double.parseDouble(textFieldProdajniKurs.getText()),
 							Double.parseDouble(textFieldKupovniKurs.getText()),
 							Double.parseDouble(textFieldSrednjiKurs.getText()));
+					dispose();
 				}
 			});
 		}

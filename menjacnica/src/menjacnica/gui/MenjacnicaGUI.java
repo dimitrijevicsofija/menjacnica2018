@@ -25,7 +25,6 @@ import javax.swing.JTable;
 import javax.swing.KeyStroke;
 import javax.swing.border.EmptyBorder;
 
-import menjacnica.Menjacnica;
 import menjacnica.gui.kontroler.GUIKontroler;
 import menjacnica.gui.models.MenjacnicaTableModel;
 
@@ -45,7 +44,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem mntmExit;
 	private JMenuItem mntmAbout;
 
-	public Menjacnica sistem;
+	//protected Menjacnica sistem;
 	public JTable table;
 
 	/**
@@ -97,7 +96,7 @@ public class MenjacnicaGUI extends JFrame {
 			btnNewButton = new JButton("Dodaj kurs");
 			btnNewButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-				GUIKontroler.prikaziDodajKursGUI();
+					GUIKontroler.prikaziDodajKursGUI();
 				}
 			});
 			btnNewButton.setPreferredSize(new Dimension(140, 25));
@@ -217,11 +216,12 @@ public class MenjacnicaGUI extends JFrame {
 	private static void addPopup(Component component, final JPopupMenu popup) {
 	}
 
-	private JTable getTable() {
+	public JTable getTable() {
 		if (table == null) {
 			table = new JTable();
 			table.setModel(new MenjacnicaTableModel());
 		}
 		return table;
 	}
+
 }
